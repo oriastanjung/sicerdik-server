@@ -12,7 +12,9 @@ const akunRouter = require("./app/api/v1/akun/router");
 const authRouter = require("./app/api/v1/auth/router");
 const laporanRouter = require("./app/api/v1/laporan/router");
 const v1 = "/api/v1/cms";
+const cors = require("cors");
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger("dev"));
