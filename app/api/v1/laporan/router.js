@@ -51,7 +51,7 @@ router.put(
 router.put(
   "/laporan/ubah-status-ttd/:id",
   authenticateUser,
-  authorizeRoles("kasubag,sekretaris"),
+  authorizeRoles("kasubag", "sekretaris"),
   ubahStatusTTD
 );
 router.put(
